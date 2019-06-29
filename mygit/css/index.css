@@ -1,0 +1,23 @@
+body {
+  /* background-color: #fff; */
+}
+
+div,
+h2 {
+  text-align: center;
+}
+
+.second {
+  margin: 10px;
+  color: blue;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+i {
+  font-style: normal;
+  color: red;
+}

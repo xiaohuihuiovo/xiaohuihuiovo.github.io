@@ -11,23 +11,40 @@
   <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="css/index.css">
   <script src="js/index.js"></script>
+  <script src="js/vue-2.4.0.js"></script>
+
 
 </head>
 
 <body>
-  <div>
-    <!-- <a href="javascript:alert('想什么呢¿醒醒⑧，别做白日梦了 ，弟弟行为')">点<i>一下</i>就能月薪过万</a> -->
-    <h2>来了老弟¿¿¿??? ʕ •ᴥ•ʔ
-    </h2>
+  <div id="app">
+    <h2 @mouseover='action' style="color: red"> {{ msg }}</h2>
     <a href="javascript:;">点<i class="one">一下</i>就能月薪过万</a>
     <div class="second"></div>
     <div class="btn-group" role="group" aria-label="...">
       <button type="button" class="btn btn-default btn-danger">点击阻止跳转</button>
-      <button type="button" class="btn btn-default btn-info">点击继续</button>
+      <!-- <button type="button" class="btn btn-default btn-info">点击继续</button> -->
     </div>
 
-
   </div>
+  <script>
+    var vm = new Vue({
+      el: '#app',
+      data: {
+        msg: '来了老弟¿¿ ʕ •ᴥ•ʔ ʕ •ᴥ•ʔ',
+      },
+      methods: {
+        action() {
+          var timerId = setInterval(() => {
+            var start = this.msg.substring(0, 1);
+            var end = this.msg.substring(1);
+            this.msg = end + start;
+          }, 600)
+
+        }
+      }
+    })
+  </script>
 </body>
 
 </html>

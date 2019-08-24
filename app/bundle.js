@@ -39334,9 +39334,7 @@ var render = function() {
           1
         )
       ])
-    ]),
-    _vm._v(" "),
-    _c("p", [_vm._v(_vm._s(_vm.$store.getters.getGoodsSelected()))])
+    ])
   ])
 }
 var staticRenderFns = []
